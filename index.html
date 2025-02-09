@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolios</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .profile-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .profile {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 200px;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        .profile:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+
+        .profile img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .profile h2 {
+            margin: 0;
+            font-size: 1.5em;
+            color: #333;
+        }
+
+        .profile p {
+            margin: 10px 0 0;
+            color: #777;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-container">
+        <div class="profile">
+            <a href="./main_jhonat.html"><img src="./images/computer.png" alt="Profile 1"></a>
+            <h2>Jhonat Acevedo</h2>
+            <p>Web Developer</p>
+        </div>
+        <div class="profile">
+            <a href="./main_jonathan.html"><img src="./images/laptop.png" alt="Profile 2"></a>
+            <h2>Jonathan Ortega</h2>
+            <p>Web Developer</p>
+        </div>
+    </div>
+</body>
+</html>
