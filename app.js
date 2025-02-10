@@ -1,5 +1,6 @@
 const textEl = document.getElementById('text')
 const speedEl = 1
+
 const text = 'Welcome to My Portfolio!'
 
 let idx = 1
