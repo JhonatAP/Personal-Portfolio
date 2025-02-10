@@ -1,3 +1,32 @@
+const textEl = document.getElementById('text')
+const speedEl = 1
+const text = 'Welcome to My Portfolio!'
+
+let idx = 1
+let speed = 300 / speedEl
+
+writeText()
+
+function writeText() {
+    textEl.innerText = text.slice(0, idx)
+    idx++
+    if(idx > text.length) {
+        idx = 1
+    }
+    setTimeout(writeText, speed)
+}
+
+const nav = document.querySelector('.nav')
+window.addEventListener('scroll', fixNav)
+
+function fixNav() {
+    if(window.scrollY > 10) {
+        nav.classList.add('active')
+    } else {
+        nav.classList.remove('active')
+    }
+}
+
 document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault();
     
